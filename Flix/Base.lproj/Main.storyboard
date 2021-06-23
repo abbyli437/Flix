@@ -53,6 +53,7 @@
                                             <outlet property="posterView" destination="fxi-EV-Rom" id="r3p-pf-ywt"/>
                                             <outlet property="synopsisLabel" destination="HQ4-g9-Nki" id="nag-AM-Otp"/>
                                             <outlet property="titleLabel" destination="D0L-5Z-Ff6" id="iBI-Pp-URc"/>
+                                            <segue destination="rfV-MT-btQ" kind="show" id="bzb-Zy-fg7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -69,6 +70,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="624.63768115942037" y="241.74107142857142"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="2SY-63-yPg">
+            <objects>
+                <viewController id="rfV-MT-btQ" customClass="DetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ail-m0-llJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWy-k0-cRU">
+                                <rect key="frame" x="0.0" y="-8" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-1n-35m">
+                                        <rect key="frame" x="0.0" y="-88" width="414" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5n-di-VS6">
+                                        <rect key="frame" x="17" y="123" width="89" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98d-0r-prb">
+                                        <rect key="frame" x="126" y="190" width="265" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-yr-1O3">
+                                        <rect key="frame" x="17" y="270" width="374" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bXO-Al-2g7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6Ta-dN-C5K"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4va-6H-xdT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hb-Cn-qpb"/>
+                    <connections>
+                        <outlet property="backdropView" destination="uIb-1n-35m" id="n7M-it-DoX"/>
+                        <outlet property="posterView" destination="B5n-di-VS6" id="lZK-jv-ggV"/>
+                        <outlet property="synopsisLabel" destination="h55-yr-1O3" id="BND-sH-KXE"/>
+                        <outlet property="titleLabel" destination="98d-0r-prb" id="qLS-mI-5ve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDa-2Z-Tj1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350.7246376811595" y="241.74107142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YaL-Gg-GUe">
