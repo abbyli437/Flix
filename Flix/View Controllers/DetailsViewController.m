@@ -26,11 +26,17 @@
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     
     //loads poster
-    NSString *posterURLString = self.movie[@"poster_path"];
-    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
-    
-    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
-    [self.posterView setImageWithURL:posterURL];
+    if ([self.movie[@"poster_path"] isKindOfClass:[NSString class]]) {
+        NSString *posterURLString = self.movie[@"poster_path"];
+        NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+        
+        NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+        [self.posterView setImageWithURL:posterURL];
+    }
+    else {
+        self.posterView.image = nil;
+    }
+   
     
     //loads backdrop
     NSString *backdropURLString = self.movie[@"backdrop_path"];
