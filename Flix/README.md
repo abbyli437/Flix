@@ -14,7 +14,7 @@ The following **required** functionality is complete:
 - [x] User sees a loading state while waiting for the movies API.
 - [x] User can pull to refresh the movie list.
 - [x] User sees an error message when there's a networking error.
-- [ ] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 The following **optional** features are implemented:
 
@@ -35,8 +35,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. How do we know when an API call is asynchronous? I noticed that the stopAnimating method only works in a very specific part of my code.
+2. I'd also like to learn AutoSizing and get rid of a lot of the manual work!
 
 ## Video Walkthrough
 
@@ -49,6 +49,9 @@ GIF created with [Kap](https://getkap.co/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+One challenge was figuring out where to call the stopAnimating option for the loading Activity Indicator. I noticed that I have to call it at the end of the "else" of my fetchMovies method, and that it happens too fast if I call it outside of fetchMovies. I think this might be because fetchMovies is async, but I'm not too sure. However, startAnimating can be called outside of fetchMovies and still work. 
+Another realted challenge was figuring out where to call startAnimating because I can't call it inside fetchMovies- pulling down the screen to refresh the Now Playing section would have 2 loading icons and look ugly. I ended up calling it right before fetchMovies in the parts where i needed to.
 
 ## Credits
 

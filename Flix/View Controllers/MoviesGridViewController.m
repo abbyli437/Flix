@@ -26,6 +26,7 @@
     
     [self fetchMovies];
     
+    //sets poster size layout
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     
     layout.minimumInteritemSpacing = 5;
