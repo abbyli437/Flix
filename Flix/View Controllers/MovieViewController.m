@@ -31,7 +31,6 @@
     
     [self.activityIndicator startAnimating];
     [self fetchMovies];
-    [self.activityIndicator stopAnimating];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
@@ -39,8 +38,6 @@
 }
 
 - (void)fetchMovies {
-    //[self.activityIndicator startAnimating];
-    
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -62,7 +59,8 @@
                [self.tableView reloadData];
            }
         [self.refreshControl endRefreshing];
-        //[self.activityIndicator stopAnimating];
+        sleep(1.);
+        [self.activityIndicator stopAnimating];
        }];
     
     [task resume];
@@ -78,6 +76,7 @@
                                             style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action)
     {
+        [self.activityIndicator startAnimating];
         [self fetchMovies];
     }];
     [alert addAction:tryAgainAction];

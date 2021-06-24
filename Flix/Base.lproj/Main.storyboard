@@ -59,7 +59,7 @@
                                 </prototypes>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l1T-bb-1qF">
-                                <rect key="frame" x="188" y="475" width="37" height="37"/>
+                                <rect key="frame" x="188" y="431" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" systemColor="systemPinkColor"/>
                             </activityIndicatorView>
