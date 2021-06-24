@@ -124,8 +124,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv0-Cf-iEO">
+                                        <rect key="frame" x="126" y="309" width="265" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-yr-1O3">
-                                        <rect key="frame" x="20" y="338" width="374" height="21"/>
+                                        <rect key="frame" x="17" y="350" width="374" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -142,6 +149,7 @@
                     <navigationItem key="navigationItem" id="7Hb-Cn-qpb"/>
                     <connections>
                         <outlet property="backdropView" destination="uIb-1n-35m" id="n7M-it-DoX"/>
+                        <outlet property="dateLabel" destination="tv0-Cf-iEO" id="1cb-mC-9jr"/>
                         <outlet property="posterView" destination="B5n-di-VS6" id="lZK-jv-ggV"/>
                         <outlet property="synopsisLabel" destination="h55-yr-1O3" id="BND-sH-KXE"/>
                         <outlet property="titleLabel" destination="98d-0r-prb" id="qLS-mI-5ve"/>
@@ -246,7 +254,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0x-JP-1hA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0x-JP-1hA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -272,6 +280,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbI-MY-MV7">
+                                        <rect key="frame" x="151" y="364" width="247" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="c0n-0z-tG4"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="uDF-Dh-n93"/>
@@ -283,6 +298,7 @@
                     <navigationItem key="navigationItem" id="gsb-UT-jPr"/>
                     <connections>
                         <outlet property="backdropView" destination="QkL-LK-LLi" id="1DI-mS-aUF"/>
+                        <outlet property="dateLabel" destination="wbI-MY-MV7" id="wnM-LQ-Lc9"/>
                         <outlet property="posterView" destination="oPS-jN-8V9" id="NAw-3C-DY7"/>
                         <outlet property="synopsisLabel" destination="nV8-Qk-wPh" id="qnc-lw-YWm"/>
                         <outlet property="titleLabel" destination="Ire-Bl-BHK" id="Q6q-FB-ON9"/>
