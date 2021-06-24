@@ -128,6 +128,7 @@
 		88C4CAE826838F1C009A861F = {
 			isa = PBXGroup;
 			children = (
+				88C4CB372683BEB1009A861F /* README.md */,
 				88C4CAF326838F1C009A861F /* Flix */,
 				88C4CB0F26838F1D009A861F /* FlixTests */,
 				88C4CB1A26838F1E009A861F /* FlixUITests */,
@@ -164,7 +165,6 @@
 				88C4CB0226838F1D009A861F /* LaunchScreen.storyboard */,
 				88C4CB0526838F1D009A861F /* Info.plist */,
 				88C4CB0626838F1D009A861F /* main.m */,
-				88C4CB372683BEB1009A861F /* README.md */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
