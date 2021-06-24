@@ -71,7 +71,7 @@
         message:@"The Internet connection appears to be offline."
         preferredStyle:(UIAlertControllerStyleAlert)];
 
-    // create an OK action
+    // create a Try Again action
     UIAlertAction *tryAgainAction = [UIAlertAction actionWithTitle:@"Try Again"
                                             style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action)
@@ -80,6 +80,7 @@
         [self fetchMovies];
     }];
     [alert addAction:tryAgainAction];
+    
     [self presentViewController:alert animated:YES completion:^{
         // optional code for what happens after the alert controller has finished presenting
     }];
