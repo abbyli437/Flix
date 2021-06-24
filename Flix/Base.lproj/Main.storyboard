@@ -151,11 +151,11 @@
             </objects>
             <point key="canvasLocation" x="-241" y="1758"/>
         </scene>
-        <!--Item-->
+        <!--Now Playing-->
         <scene sceneID="YaL-Gg-GUe">
             <objects>
-                <navigationController id="TL6-SU-H1o" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Fyp-L1-WXA"/>
+                <navigationController title="Now Playing" id="TL6-SU-H1o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="Fyp-L1-WXA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DEV-rB-46L">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -168,11 +168,11 @@
             </objects>
             <point key="canvasLocation" x="-240" y="242"/>
         </scene>
-        <!--Item-->
+        <!--Aliens-->
         <scene sceneID="yna-ys-HTS">
             <objects>
-                <navigationController id="BPF-ja-wQO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qtJ-Zf-38O"/>
+                <navigationController title="Aliens" id="BPF-ja-wQO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Aliens" image="superhero_tabbar_item" id="qtJ-Zf-38O"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WfZ-Ld-q5c">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="987" y="242"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Aliens-->
         <scene sceneID="FhZ-8m-MZe">
             <objects>
                 <viewController id="7bh-zl-NEJ" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -228,7 +228,7 @@
                         <viewLayoutGuide key="safeArea" id="Ve3-W7-UDh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aIt-N9-gSR"/>
+                    <navigationItem key="navigationItem" title="Aliens" id="aIt-N9-gSR"/>
                     <connections>
                         <outlet property="collectionView" destination="0XJ-Yh-TPN" id="mwW-7z-Tum"/>
                     </connections>
@@ -239,6 +239,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="superhero_tabbar_item" width="21" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
