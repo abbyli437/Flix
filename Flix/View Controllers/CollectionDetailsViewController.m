@@ -53,6 +53,10 @@
     [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
     [self.dateLabel sizeToFit];
+    
+    //adds border to poster
+    self.posterView.layer.borderWidth = 2;
+    self.posterView.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 /*

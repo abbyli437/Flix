@@ -40,7 +40,8 @@
 }
 
 - (void)fetchMovies {
-    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/520763/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"];
+    //for aliens (used to be from quiet place 2, changed to luca bc aliens won't work) (need to ask why)
+    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/508943/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -90,6 +91,7 @@
         [cell.posterView setImageWithURL:posterURL];
     }
     else {
+        NSLog(movie[@"title"]);
         cell.posterView.image = nil;
     }
     

@@ -116,35 +116,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-1n-35m">
-                                        <rect key="frame" x="0.0" y="-88" width="414" height="350"/>
+                                        <rect key="frame" x="0.0" y="-88" width="414" height="386"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B5n-di-VS6">
-                                        <rect key="frame" x="17" y="192" width="89" height="128"/>
+                                        <rect key="frame" x="22" y="215" width="111" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98d-0r-prb">
-                                        <rect key="frame" x="126" y="270" width="265" height="44"/>
+                                        <rect key="frame" x="151" y="306" width="247" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv0-Cf-iEO">
-                                        <rect key="frame" x="126" y="309" width="265" height="33"/>
+                                        <rect key="frame" x="151" y="364" width="247" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-yr-1O3">
-                                        <rect key="frame" x="17" y="350" width="374" height="21"/>
+                                        <rect key="frame" x="22" y="412" width="374" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="bXO-Al-2g7"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="6Ta-dN-C5K"/>
                             </scrollView>
@@ -182,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="-240" y="242"/>
         </scene>
-        <!--Aliens-->
+        <!--Cartoons-->
         <scene sceneID="yna-ys-HTS">
             <objects>
-                <navigationController title="Aliens" id="BPF-ja-wQO" sceneMemberID="viewController">
+                <navigationController title="Cartoons" id="BPF-ja-wQO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Aliens" image="superhero_tabbar_item" id="qtJ-Zf-38O"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WfZ-Ld-q5c">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -199,7 +200,7 @@
             </objects>
             <point key="canvasLocation" x="987" y="242"/>
         </scene>
-        <!--Aliens-->
+        <!--Cartoons-->
         <scene sceneID="FhZ-8m-MZe">
             <objects>
                 <viewController id="7bh-zl-NEJ" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -243,7 +244,7 @@
                         <viewLayoutGuide key="safeArea" id="Ve3-W7-UDh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Aliens" id="aIt-N9-gSR"/>
+                    <navigationItem key="navigationItem" title="Cartoons" id="aIt-N9-gSR"/>
                     <connections>
                         <outlet property="collectionView" destination="0XJ-Yh-TPN" id="mwW-7z-Tum"/>
                     </connections>
@@ -276,24 +277,25 @@
                                         <rect key="frame" x="151" y="306" width="247" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV8-Qk-wPh">
                                         <rect key="frame" x="22" y="412" width="353" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbI-MY-MV7">
                                         <rect key="frame" x="151" y="364" width="247" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="c0n-0z-tG4"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="uDF-Dh-n93"/>
                             </scrollView>
