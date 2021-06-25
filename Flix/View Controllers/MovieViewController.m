@@ -17,7 +17,10 @@
 @property (nonatomic, strong) NSArray *movies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-@property bool showLoading;
+
+//search bar props
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) NSArray *filteredData;
 
 @end
 
@@ -28,6 +31,9 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    //search bar setup
+    self.searchBar.delegate = self;
     
     [self.activityIndicator startAnimating];
     [self fetchMovies];
@@ -50,6 +56,8 @@
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
                self.movies = dataDictionary[@"results"];
+               //sets up filtered movies for search bar
+               self.filteredData = dataDictionary[@"results"];
                
                [self.tableView reloadData];
            }
@@ -82,16 +90,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.movies.count;
+    //return self.movies.count;
+    return self.filteredData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     
-    NSDictionary *movie = self.movies[indexPath.row];
+    NSDictionary *movie = self.filteredData[indexPath.row]; //changed from movies because of search bar
     cell.titleLabel.text = movie[@"title"];
     cell.synopsisLabel.text = movie[@"overview"];
+    
+    //UI changes to make vertical alignment look good
+    //[cell.titleLabel sizeToFit];
+    cell.titleLabel.adjustsFontSizeToFitWidth = true;
+    cell.titleLabel.minimumScaleFactor = 0.2;
+    [cell.synopsisLabel sizeToFit];
     
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     
@@ -108,6 +123,29 @@
     }
     
     return cell;
+}
+
+//updates filter when search bar field changesx
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if (searchText.length != 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject[@"title"] containsString:searchText];
+        }];
+        //alternative predicate
+        //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(title CONTAINS[cd] %@)", searchText];
+        
+        self.filteredData = [self.movies filteredArrayUsingPredicate:predicate];
+        
+        NSLog(@"%@", self.filteredData);
+        
+    }
+    else {
+        self.filteredData = self.movies;
+    }
+    
+    [self.tableView reloadData];
+ 
 }
 
 #pragma mark - Navigation
